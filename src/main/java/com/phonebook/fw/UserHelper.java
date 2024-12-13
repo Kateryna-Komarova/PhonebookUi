@@ -17,6 +17,12 @@ public class UserHelper extends BaseHelper{
         type(By.name("email"), user.getEmail());
         type(By.name("password"), user.getPassword());
     }
+    public void fillRegisterLoginFormForRecord(User user) {
+        type(By.name("email"), user.getEmail());
+        pause(1000);
+        type(By.name("password"), user.getPassword());
+        pause(1000);
+    }
 
     public void clickOnLoginLink() {
         click(By.cssSelector("[href='/login']"));
